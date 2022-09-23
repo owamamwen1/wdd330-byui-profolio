@@ -9,7 +9,54 @@
 </head>
 
 <body>
-    <h2>Arrays Logic Loop</h2>
+    <h2>Arrays Logic Loop - FrontEnd Developer Members</h2>
+    <div id="card">
+    </div>
 </body>
+<script>
+    const cardContent = [
+        {
+            member: "Member",
+            name: "Denis",
+            surname: 'Poussard',
+            course: "WDD330",
+        },
+        {
+            member: "Member",
+            name: "God'spower Richard",
+            surname: 'Omachona',
+            course: "WDD330",
+        },
+        {
+            member: "Member",
+            name: "Bryce Hiroshi",
+            surname: 'Williams',
+            course: "WDD330",
+        },
+        {
+            member: "Member",
+            name: "Arnold Sujan",
+            surname: 'Katru',
+            course: "WDD330",
+        },
+        {
+            member: "Member",
+            name: "Owamamwen",
+            surname: 'Ogunniyi',
+            course: "WDD330",
+        }
+    ]
+    const myContent = document.querySelector('#card');
+    const showContent = cardContent.map((objCard, index) => {
+        return `
+        <h5>${objCard.member}</h5>
+        <p>Name: ${objCard.name}</p>
+        <p>Surname: ${objCard.surname}</p>
+        <p>Surname: ${objCard.course}</p>
+        `
+    })
+
+    myContent.innerHTML = showContent;
+</script>
 
 </html>
