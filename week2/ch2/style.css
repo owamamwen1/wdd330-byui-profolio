@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Nova+Square&display=swap');
+
+:root{
+    background-color:  rgba(29, 26, 26);
+}
+*{
+    font-family: 'Nova Square', cursive;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 62.5%;
+}
+h1{
+    font-size: 5.4rem;
+    color: white;
+    margin-bottom: 5rem;
+}
+h2{
+    font-size: 4.2rem;
+    margin-bottom: 4rem;
+}
+.container{
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    max-width: 88rem;
+    padding: 2rem;
+    margin: 0 auto;
+}
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+.flex-center{
+    align-items: center;
+    justify-content: center;
+}
+.hidden{
+    display: flex;
+}
+.text-center{
+    text-align: center;
+}
+.btn{
+    font-size: 2.4rem;
+    width: 30rem;
+    padding: 2rem 0;
+    border-radius: 5px;
+    text-align: center;
+    color: rgb(236, 230, 230);
+    background: linear-gradient(90deg,rgba(18, 92, 55) 0%, rgb(145, 174, 218) 100%);
+    margin-bottom: 1rem;
+    text-decoration: none;
+}
+.btn:hover{
+    cursor: pointer;
+    transition: transform 148ms;
+    transform: scale(1.1);
+    box-shadow: 0 0.3rem 1.3rem 0 rgba(8, 114, 0.6);
+}
+.btn[disabled]{
+    transform: none;
+    box-shadow: none;
+    cursor: not-allowed;
+}
+#btn-highscore{
+    background: linear-gradient(90deg,rgba(80, 78, 59) 0%, rgb(184, 184, 182) 100%);
+}
+
+/* Home-game */
+body{
+    color: white;
+}
+.game-container{
+    display: flex;
+    margin-bottom: 0.8rem;
+    width: 100%;
+    border-radius: 4px;
+    background: rgb(62, 85, 137);
+    font-size: 3rem;
+    min-width: 80rem;
+}
+
+.game-container:hover{
+cursor: pointer;
+box-shadow:  0 0.4rem 1.4rem 0 rgba(6, 103, 247, 0.5);
+transform: scale(1.1);
+transform: transform 100ms;
+}
+.game-prefix{
+    padding: 2rem 2.5rem;
+    color: white;
+}
+.game-text{
+    padding: 2rem;
+    width: 100%;
+}
+.correct{
+    background: linear-gradient(32deg rgba(11, 223, 36) 0% rgb(41, 232, 111) 100%);
+}
+.incorrect{
+    background: linear-gradient(32deg rgba(230, 29, 1) 0% rgb(224, 11, 11, 1) 100%);
+}
+
+/* Head */
+#hub{
+    display: flex;
+    justify-content: space-between;
+}
+.hub-prefix{
+    text-align: center;
+    font-size: 2rem;
+}
+.hub-main-text{
+    text-align: center;
+}
+#begainBar{
+    width: 20rem;
+    height: 3rem;
+    border: 0.2rem solid rgb(11, 223, 36);
+    margin-top: 2rem;
+    border-radius: 50px;
+    overflow: hidden;
+}
+#begainBarFull{
+    height: 100%;
+    background: rgb(11, 223, 36);
+    width: 0%;
+}
+
+/* game end */
+.end-form-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 3
+    50rem;
+}
+#username{
+    margin-bottom: 3rem;
+    outline: none;
+    width: 100%;
+}
+#end-text{
+    font-size: 2.3rem;
+    color: white;
+    text-align: center;
+}
+input{
+    margin-bottom: 1rem;
+    width: 20rem;
+    font-size: 1.7rem;
+    border: none;
+    padding: 1.8rem;
+    box-shadow: 0 0.1rem 1.3rem 0 rgba(93, 105, 111, 0.5);
+}
+input::placeholder{
+color: rgb(55, 52, 49);
+}
+#finalScore{
+    display: flex;
+    justify-content: center;
+}
+
+/* Game Score */
+#highScoresList{
+    list-style: none;
+    margin-bottom: 4rem;
+}
+.high-score{
+    font-size: 2.7rem;
+    margin-bottom: 0.6rem;
+}
+
+
+@media screen and (max-width: 768px) {
+    .game-container{
+        max-width: 40rem;
+    }
+}
