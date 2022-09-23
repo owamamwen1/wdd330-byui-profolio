@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="game" class="just-game-center flex-column">
+            <div id="hub">
+                <div class="hub-item">
+                    <p id="begainText" class="hub-prefix">
+                        Question
+                    </p>
+                    <div id="begainBar">
+                        <div id="begainBarFull"></div>
+                    </div>
+                </div>
+                <div class="hub-item">
+                    <p class="hub-prefix">
+                        Score
+                    </p>
+                    <h1 class="hub-main-text" id="score">
+                        0
+                    </h1>
+                </div>
+            </div>
+            <h1 id="question">WDD330 is about exploration skills</h1>
+            <div class="game-container">
+                <p class="game-prefix">A</p>
+                <p class="game-text" data-number="1">Choice</p>
+            </div>
+            <div class="game-container">
+                <p class="game-prefix">B</p>
+                <p class="game-text" data-number="2">Choice 2</p>
+            </div>
+            <div class="game-container">
+                <p class="game-prefix">C</p>
+                <p class="game-text" data-number="3">Choice 3</p>
+            </div>
+            <div class="game-container">
+                <p class="game-prefix">D</p>
+                <p class="game-text" data-number="4">Choice 4</p>
+            </div>
+        </div>
+    </div>
+    <script src="./game.js"></script>
+</body>
+
+</html>
