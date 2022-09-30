@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Nova+Square&display=swap');
+
+:root{
+    background-color:  rgba(29, 26, 26);
+    color: white;
+}
+ *{
+    font-family: 'Nova Square', cursive;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 62.5%;
+}
+.container {
+    width: 350px;
+    width: 50%;
+    margin: 0 auto;
+}
+h1{
+    font-size: 5.4rem;
+    margin-bottom: 5rem;
+}
+
+#inputValue {
+    width: 300px;
+    height: 52px;
+    border-width: 0;
+    border: 2px solid black;
+    outline: none;
+    font-size: 30px;
+    vertical-align: middle;
+}
+
+#addToDoList {
+    height: 50px;
+    width: 50px;
+    border: 1px solid black;
+    vertical-align: middle;
+    font-size: 30px;
+}
+
+.paragraph {
+    margin: 0;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.todoList {
+    margin-top: 25px;
+}
+.line-through{
+    color:azure;
+    text-decoration: line-through;
+}
