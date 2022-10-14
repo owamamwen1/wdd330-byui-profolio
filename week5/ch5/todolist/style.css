@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Nova+Square&display=swap');
+
+:root{
+  background-color: #24273c;
+}
+*{
+    font-family: 'Nova Square', cursive;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+  font-size: 70.5%;
+  position: relative;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+h1{
+  background-color: rgb(100, 59, 59);
+  display: flex;
+  color: white;
+  justify-content: center;
+  padding:  13px;
+}
+
+body {
+  font: 400px;
+  padding-top: 8rem;
+  width: min(85%, 54rem);
+  margin: auto;
+}
+
+/* INPUT */
+
+input,
+button {
+  font: inherit;
+  border: 0;
+  background: transparent;
+}
+
+input:focus,
+button:focus {
+  outline: 0;
+}
+
+label {
+    display: none;
+}
+button {
+    display: flex;
+    user-select: none;
+  }
+
+/* CARDS  */
+
+.cardtodo {
+  background-color: hsl(0, 0%, 100%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.9rem 2rem;
+  gap: 2rem;
+}
+/* CHECKBOX */
+
+.cardtodo .add-container {
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 0.1rem solid black;
+  border-radius: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.cardtodo .add-container .cb-input {
+  transform: scale(1.8);
+  opacity: 0;
+}
+
+.cardtodo .add-container .check {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+/* CHECKED */
+
+.cardtodo .add-container .cb-input:checked + .check {
+  background-color:  rgb(100, 59, 59);
+}
+
+/* ADD */
+
+.addtodo {
+  margin: 4rem 0 2.5rem 0;
+  border-radius: 0.5rem;
+}
+
+.addtodo .add-container {
+  transition: background 0.3s ease;
+}
+
+.addtodo .add-container #add-btn {
+  color: hsl(243, 12%, 30%);
+  font-size: 30px;
+  transition: color 0.3s ease;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.addtodo .add-container:hover {
+  background-color: hsl(221, 17%, 25%);
+}
+
+.addtodo .add-container:active {
+  transform: scale(0.95);
+}
+
+.addtodo .add-container:hover #add-btn {
+  color: hsl(0, 0%, 100%);
+}
+
+.addtodo .txt-container {
+  flex: 1;
+}
+
+.addtodo .txt-container .txt-input {
+  width: 100%;
+  padding: 0.7rem 0;
+  color: hsl(240, 8%, 24%);
+}
+
+body.light .addtodo .txt-container .txt-input {
+  font-weight: 700px;
+}
+
+.addtodo .txt-container .txt-input::placeholder {
+  color: hsl(252, 9%, 73%);
+  font-weight: 400px;
+}
+
+/* TODOS */
+
+.todo > * {
+  transition: 0.4s ease;
+}
+
+.todo .cardtodo[draggable] {
+  cursor: move;
+}
+
+.todo .cardtodo:first-child {
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.todo > * + * {
+  border-top: 0.2rem solid hsl(258, 8%, 47%);
+}
+
+.item {
+  flex: 1;
+  color: hsl(243, 12%, 30%);
+}
+
+.item:hover {
+  color: rgb(100, 59, 59);
+  cursor: pointer;
+}
+
+/* COMPLETED */
+
+.todo .cardtodo.checked .item {
+  text-decoration: line-through;
+  color: hsl(234, 11%, 52%);
+  text-decoration-color: rgb(100, 59, 59);
+}
+
+/* CLEAR */
+
+.clear {
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+
+.todo .cardtodo:hover .clear {
+  opacity: 1;
+  pointer-events: all;
+  cursor: pointer;
+}
+
+/* STAT */
+
+.stage {
+  border-radius: 0 0 0.5rem 0.5rem;
+  border-top: 0.2rem solid hsl(252, 21%, 94%);
+  font-size: 12px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.stage * {
+  color: rgb(100, 59, 59);
+}
+
+.stage .corner-todo:last-child {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.stage .corner-todo button:hover {
+  color: hsl(0, 14%, 64%);
+  cursor: pointer;
+}
+
+/* FILTER */
+
+.stage .todo-filter {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700px;
+}
+
+.stage .todo-filter *:hover {
+  color: hsl(0, 14%, 64%);
+  cursor: pointer;
+}
+
+.stage .todo-filter .on {
+  color: hsl(220, 98%, 61%);
+}
+
+
+/* JAVASCRIPT FUNCTIONS */
+
+.todo.active .cardtodo.checked,
+.todo.completed .cardtodo {
+  transition: 0.4s;
+  opacity: 0;
+  padding: 0;
+  border: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+.todo.completed .cardtodo.checked {
+  opacity: 1;
+  padding: 1.9rem 2rem;
+  height: auto;
+  display: flex;
+  pointer-events: all;
+  transition: 0.4s;
+}
+
+.todo.completed > .cardtodo.checked ~ .cardtodo.checked {
+  border-top: 0.2rem solid hsl(252, 21%, 94%);
+}
+
+/* ANIMATION */
+.todo .cardtodo.fall {
+  pointer-events: none;
+  animation: fall 0.2s forwards ease;
+}
+
+@keyframes fall {
+  0% {
+    opacity: 0.5;
+    transform: translateX(20%);
+  }
+  50% {
+    transform: translateX(25%) rotateZ(40deg);
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateX(30%) rotateZ(90deg);
+    opacity: 0;
+  }
+}
+
+/* DRAG TODO*/
+.todo .cardtodo.dragging {
+  opacity: 0.5;
+}
+
+@media (max-width: 599px) {
+  .stage {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 5rem 2rem;
+  }
+  .stage .todo-filter {
+    grid-row: 2/3;
+    grid-column: 1/3;
+    justify-content: space-around;
+    position: relative;
+  }
+  .stage .todo-filter::before {
+    content: "";
+    position: absolute;
+    width: calc(100% + 4rem);
+    height: 1rem;
+    background-color: hsl(235, 21%, 11%);
+    top: -3rem;
+  }
+}
