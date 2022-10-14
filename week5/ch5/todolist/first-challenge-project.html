@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD330 ToDo List with localStorage</title>
+    <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+    <h1>ToDo List</h1>
+    <main>
+        <ul class="todo"></ul>
+        <div class="cardtodo stage">
+            <p class="corner-todo"><span id="todo-left">0</span> tasks left</p>
+            <div class="todo-filter">
+                <button id="all" class="on">All</button>
+                <button id="active">Active</button>
+                <button id="completed">Completed</button>
+            </div>
+            <div class="corner-todo">
+                <button id="clear-todo"><img src="./assets/images/delete-svgrepo-com.svg" /></button>
+            </div>
+        </div>
+        <div class="cardtodo addtodo">
+            <div class="txt-container">
+                <label for="todol">Create todo</label>
+                <input type="text" class="txt-input" placeholder="Add a new todo..." spellcheck="false"
+                    autocomplete="off" id="todol" />
+            </div>
+            <div class="add-container">
+                <button id="add-btn">+</button>
+            </div>
+        </div>
+    </main>
+    <script src="./todos.js"></script>
+</body>
+
+</html>
