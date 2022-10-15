@@ -1,3 +1,7 @@
+import localStoresFull from "./ls.js";
+
+// localStorages
+ let Stores = new localStoresFull();
 
 function main() {
 
@@ -17,11 +21,10 @@ function main() {
       } else {
         this.insertBefore(dragCard, e.target.nextSibling);
       }
-    const todo = JSON.parse(localStoreGet("todo"));
+    const todo = JSON.parse(Stores.localStoreGet("todo"));
       const removePost = todo.splice(currentPost, 1);
       todo.splice(newPost, 0, removePost[0]);
-      localStoreSet("todo",todo);
-    //   localStorage.setItem("todo", JSON.stringify(todo));
+      Stores.localStoreSet("todo",todo);
     }
   });
   // add new todo
@@ -31,15 +34,14 @@ function main() {
     const item = todoTxtInput.value.trim();
     if (item) {
       todoTxtInput.value = "";
-      const todo = !localStoreGet("todo")
-        ? [] : JSON.parse(localStoreGet("todo"));
+      const todo = !Stores.localStoreGet("todo")
+        ? [] : JSON.parse(Stores.localStoreGet("todo"));
       const currentTodo = {
         item,isCompleted: false,
       };
       newTodo([currentTodo]);
       todo.push(currentTodo);
-      localStoreSet("todo",todo)
-    //   localStorage.setItem("todo", JSON.stringify(todo));
+      Stores.localStoreSet("todo",todo)
     }
     todoTxtInput.focus();
   });
@@ -83,35 +85,32 @@ main();
 /* stageTodo */
 
 function stageTodo(index, completed) {
-  const todo = JSON.parse(localStoreGet("todo"));
+  const todo = JSON.parse(Stores.localStoreGet("todo"));
   todo[index].isCompleted = completed;
-  localStoreSet("todo",todo);
-//   localStorage.setItem("todo", JSON.stringify(todo));
+  Stores.localStoreSet("todo",todo);
 }
 
 /* removeMultiTodo */
 
 function removeTodo(index) {
-  const todo = JSON.parse(localStoreGet("todo"));
+  const todo = JSON.parse(Stores.localStoreGet("todo"));
   todo.splice(index, 1);
-  localStoreSet("todo",todo);
-//   localStorage.setItem("todo", JSON.stringify(todo));
+  Stores.localStoreSet("todo",todo);
 }
 
 /* removeMultiTodo */
 
 function removeMultiTodo(indexes) {
-  let todo = JSON.parse(localStoreGet("todo"));
+  let todo = JSON.parse(Stores.localStoreGet("todo"));
   todo = todo.filter(function (todo, index) {
     return !indexes.includes(index);
   });
-  localStoreSet("todo",todo);
-//   localStorage.setItem("todo", JSON.stringify(todo));
+  Stores.localStoreSet("todo",todo);
 }
 
 /* newTodo */
 
-function newTodo(todo = JSON.parse(localStoreGet("todo"))) {
+function newTodo(todo = JSON.parse(Stores.localStoreGet("todo"))) {
   if (!todo) {
     return null;
   }
@@ -203,11 +202,3 @@ function newTodo(todo = JSON.parse(localStoreGet("todo"))) {
     ".todo .cardtodo:not(.checked)"
   ).length;
 }
-
-function localStoreGet (todo){
-    return localStorage.getItem(`${todo}`)
- }
-
- function localStoreSet (todo1,todo2){
-    return localStorage.setItem(`${todo1}`, JSON.stringify(todo2));
- }
