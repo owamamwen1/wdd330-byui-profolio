@@ -1,0 +1,52 @@
+[
+    {
+      "id": "01",
+      "name": "Preston Bateman",
+      "gender": "Male"
+    },
+    {
+      "id": "02",
+      "name": "CJ Bialorucki",
+      "gender": "Male"
+     },
+    {
+      "id": "03",
+      "name": "Mark Nolan Bullag",
+      "gender": "Male"
+    },
+    {
+      "id": "04",
+      "name": "Miguel Angel",
+      "gender": "Male" 
+    },
+    {
+      "id": "05",
+      "name": "Owamamwen Ogunniyi",
+      "gender": "Male"
+     },
+    {
+      "id": "06",
+      "name": "Richard Omachona",
+      "gender": "Male"
+     },
+    {
+      "id": "07",
+      "name": "Denis Poussard",
+      "gender": "Male"
+    },
+    {
+      "id": "08",
+      "name": "Arnord Sujan Katru",
+      "gender": "Male"
+    },
+    {
+      "id": "09",
+      "name": "Dallin Gilbert",
+      "gender": "Male"
+     },
+    {
+      "id": "10",
+      "name": "Jameson Manning",
+      "gender": "Male"
+     }
+  ]

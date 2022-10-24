@@ -1,0 +1,19 @@
+.btn {
+  cursor: pointer;
+  appearance: none;
+  color: blanchedalmond;
+  background: grey;
+  border: none;
+  border-radius: black;
+  padding: 0.375rem 0.75rem;
+
+  text-transform: capitalize;
+}
+button:hover,
+.btn:hover {
+  color: black;
+  background: yellow;
+}
+h1{
+  text-align: center;
+}
