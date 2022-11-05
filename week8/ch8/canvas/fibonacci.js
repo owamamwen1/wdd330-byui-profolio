@@ -8,7 +8,7 @@ let number = 0;
 let scale = 10;
 
 function fibonacciFlower(){
-  let angle =  number * 3.343;
+  let angle =  number * 0.34;
   let radius =  scale *  Math.sqrt(number);
   let positionX = radius * Math.sin(angle) + canvas.width/2;
   let positionY = radius * Math.cos(angle) + canvas.width/2;
@@ -17,7 +17,7 @@ fibo.fillStyle = 'gray';
 fibo.strokeStyle = 'black';
 fibo.lineWidth = 4;
 fibo.beginPath();
-fibo.arc(positionX, positionY, 5, 0, Math.PI * 2);
+fibo.arc(positionX, positionY, 4, 0, Math.PI * 2);
 fibo.closePath();
 fibo.fill();
 fibo.stroke();
