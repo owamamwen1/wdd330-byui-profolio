@@ -1,71 +1,290 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>WDD 330 portfolio</title>
-  <link rel="stylesheet" href="styles.css" />
-  <script src="./main.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wdd330 Portfolio</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <meta name="description" content="WDD330">
+  <meta name="author" content="Ogunniyi Owamamwen">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
 </head>
 
 <body>
-  <h1 class="head_center">WDD 330 portfolio <br /> <a href="https://github.com/owamamwen1/wdd330-byui-profolio"
-      target="_blank">GitHub Code</h1>
-  <h2>Week 1</h2>
-  <ol>
-    <li><a href="week1/index.html">Week 01</a></li>
-    <li><a href="./week1/ch1/index.html">Challenge 1: Todo</a></li>
-  </ol>
-  <h2>Week 2</h2>
-  <ol>
-    <li><a href="week2/teamwork/index.html">Team 02</a></li>
-    <li><a href="week2/ch2/index.html">Challenge 2: Todo</a></li>
-  </ol>
-  <h2>Week 3</h2>
-  <ol>
-    <li><a href="./week3/teamwork/index.html">Team 03</a></li>
-    <li><a href="./week3/ch3/index.html">Challenge 3: Todo</a></li>
-  </ol>
-  <h2>Week 4</h2>
-  <ol>
-    <li><a href="./week4/teamwork/index.html">Team 04</a></li>
-    <li><a href="./week4/ch4/index.html">Challenge 4: Todo</a></li>
-  </ol>
-  <h2>Week 5 and 6</h2>
-  <ol>
-    <li><a href="./week5/teamwork/index.html">Team 05</a></li>
-    <li><a href="./week5/ch5/index.html">Challenge 5: Todo</a></li>
-  </ol>
-  <h2>Week 7</h2>
-  <ol>
-    <li><a href="./week7/teamwork/index.html">Team 07</a></li>
-    <li><a href="./week7/ch7/index.html">Challenge 7: Todo</a></li>
-  </ol>
-  <h2>Week 8</h2>
-  <ol>
-    <li><a href="./week8/teamwork/index.html">Team 08</a></li>
-    <li><a href="./week8/ch8/index.html">Challenge 8: Todo</a></li>
-  </ol>
-  <h2>Week 9</h2>
-  <ol>
-    <li><a href="./week9/teamwork/index.html">Team 09</a></li>
-    <li><a href="./week9/ch9/index.html">Challenge 9: Todo</a></li>
-  </ol>
-  <h2>Week 10</h2>
-  <ol>
-    <li><a href="./week10/teamwork/index.html">Team 10</a></li>
-    <li><a href="./week10/ch10/index.html">Challenge 10: Todo</a></li>
-  </ol>
-  <h2>Week 11</h2>
-  <ol>
-    <li><a href="./week11/teamwork/index.html">Team 11</a></li>
-  </ol>
-  <h2>Week 12</h2>
-  <ol>
-    <li><a href="./week12/teamwork/index.html">Team 12</a></li>
-  </ol>
-  </ul>
+
+  <header>
+    <a href="#" class="logo">Wdd<span>3</span>30</a>
+
+    <ul class="navlist">
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#team-portfolio">Team Project</a></li>
+      <li><a href="#challenge-portfolio">Challenge</a></li>
+    </ul>
+    <div class="bx bx-menu" id="menu-icon">
+    </div>
+  </header>
+
+  <section class="home" id="home">
+    <div class="home-text">
+      <div class="slide">
+        <span class="one">Hello</span>
+        <span class="two">I'm</span>
+      </div>
+      <h1>Ogunniyi.O</h1>
+      <h3>Web<span> Developer.</span></h3>
+      <p>Web developer with experience that keep customers <br> coming back, services with unique.</p>
+    </div>
+  </section>
+
+  <div class="contact-icons">
+    <a href="https://github.com/ASKHOPE/wdd330teamassignments" target="_blank"><i class='bx bxl-github'></i></a>
+  </div>
+
+  <!----team portfolio section design--->
+  <section class="portfolio" id="team-portfolio">
+    <div class="main-text">
+      <p>Collaboration</p>
+      <h2><span>Team</span> Project</h2>
+    </div>
+
+    <div class="portfolio-content">
+      <div class="row">
+        <img src="img/teamwork.png">
+        <div class="layer">
+          <h5>Week one: Event & Story Editor</h5>
+          <p>Onclick execute a JavaScript function when an element gets clicked and localStorage allow store
+            key/value.</p>
+          <a href="week1/index.html" target="_blank"><i class='bx bx-link-external'></i></a>
+        </div>
+      </div>
+
+      <div class="row">
+        <img src="img/teamwork2.png">
+        <div class="layer">
+          <h5>Week two: calculator</h5>
+          <p>A simple calculator web design.</p>
+          <a href="https://askhope.github.io/wdd330teamassignments/week2/index.html" target="_blank"><i
+              class='bx bx-link-external'></i></a>
+        </div>
+      </div>
+
+      <div class="row">
+        <img src="img/teamwork3.png">
+        <div class="layer">
+          <h5>Week Three: Array Cardio</h5>
+          <p>Psst: have a look at the JavaScript Console.</p>
+          <a href="https://askhope.github.io/wdd330teamassignments/week3/index-START.html" target="_blank"><i
+              class='bx bx-link-external'></i></a>
+        </div>
+      </div>
+      <div class="row">
+        <img src="img/teamwork2.png">
+        <div class="layer">
+          <h5>Week Four: Tic Tac Toe</h5>
+          <p>A simple tic tac toe game.</p>
+          <a href="https://askhope.github.io/wdd330teamassignments/week4/index.html" target="_blank"><i
+              class='bx bx-link-external'></i></a>
+        </div>
+      </div>
+      <div class="row">
+        <img src="img/teamwork3.png">
+        <div class="layer">
+          <h5>Week Five: Great Hikes</h5>
+          <p>If the content fails to load please clone the git or download the zip and use live server on vs
+            code.</p>
+          <a href="https://askhope.github.io/wdd330teamassignments/week5/index.html" target="_blank"><i
+              class='bx bx-link-external'></i></a>
+        </div>
+      </div>
+      <div class="row">
+        <img src="img/teamwork.png">
+        <div class="layer">
+          <h5>Week Six and Seven: Comment included</h5>
+          <p>The week 6 and 7 the Great Hikes comment was included, if the content fails to load please clone
+            the git or
+            download from github the zip and use live server on vs
+            code.</p>
+          <a href="https://askhope.github.io/wdd330teamassignments/week7/index.html" target="_blank"><i
+              class='bx bx-link-external'></i></a>
+        </div>
+      </div>
+      <div class="row">
+        <img src="img/teamwork.png">
+        <div class="layer">
+          <h5>Week Eight: STAR WARS</h5>
+          <p>A callback is a function passed as an argument to another function. This technique allows a
+            function to call another function.</p>
+          <a href="https://askhope.github.io/wdd330teamassignments/week8/index.html" target="_blank"><i
+              class='bx bx-link-external'></i></a>
+        </div>
+      </div>
+      <div class="row">
+        <img src="img/teamwork2.png">
+        <div class="layer">
+          <h5>Week Nine: DrumKit</h5>
+          <p>Add the playing class to a button when it's key is press make sound.</p>
+          <a href="https://askhope.github.io/wdd330teamassignments/week9/index.html" target="_blank"><i
+              class='bx bx-link-external'></i></a>
+        </div>
+      </div>
+      <div class="row">
+        <img src="img/teamwork3.png">
+        <div class="layer">
+          <h5>Week Ten: Quake List</h5>
+          <p>Use the next and prev urls to build a UI with next and prev buttons to move back and forth
+            between pages of results.</p>
+          <a href="https://askhope.github.io/wdd330teamassignments/week10/index.html" target="_blank"><i
+              class='bx bx-link-external'></i></a>
+        </div>
+      </div>
+      <div class="row">
+        <img src="img/teamwork2.png">
+        <div class="layer">
+          <h5>Week Eleven: Authentication JWT</h5>
+          <p>JWT authentication is a token-based stateless authentication mechanism. It is popularly used as a
+            client-side-based stateless session.</p>
+          <a href="https://askhope.github.io/wdd330teamassignments/week11/client/index.html" target="_blank"><i
+              class='bx bx-link-external'></i></a>
+        </div>
+      </div>
+      <div class="row">
+        <img src="img/teamwork3.png">
+        <div class="layer">
+          <h5>Week Twelve: ChatBot</h5>
+          <p>Simple chatbot for customer services assistance.</p>
+          <a href="https://askhope.github.io/wdd330teamassignments/week12/index.html" target="_blank"><i
+              class='bx bx-link-external'></i></a>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+  <div class="contact-icons">
+    <a href="https://github.com/owamamwen1/wdd330-byui-profolio" target="_blank"><i class='bx bxl-github'></i></a>
+  </div>
+  <!----personal portfolio section design--->
+  <section class="portfolio" id="challenge-portfolio">
+    <div class="main-text">
+      <p>Self Challenge</p>
+      <h2><span>Personal</span> Project</h2>
+    </div>
+
+    <div class="portfolio-content">
+      <div class="row">
+        <img src="img/challenge1.png">
+        <div class="layer">
+          <h5>Week one: Even and Odd numbers, Take a note, Customer form</h5>
+          <p>An even number is a number that can be divided into two equal groups. An odd number is a number
+            that cannot be divided into two equal groups.</p>
+          <a href="https://owamamwen1.github.io/wdd330-byui-profolio/week1/ch1/index.html" target="_blank"><i
+              class='bx bx-link-external'></i></a>
+        </div>
+      </div>
+
+      <div class="row">
+        <img src="img/challenge2.png">
+        <div class="layer">
+          <h5>Week two: Arrays, Quiz-game</h5>
+          <p>The game used localStorage which allows the player to save score with key/value in the browser,
+            then display it on the dashboard.</p>
+          <a href="https://owamamwen1.github.io/wdd330-byui-profolio/week2/ch2/index.html	" target="_blank"><i
+              class='bx bx-link-external'></i></a>
+        </div>
+      </div>
+      <div class="row">
+        <img src="img/challenge3.png">
+        <div class="layer">
+          <h5>Week three: ToDo list</h5>
+          <p>You make sure that your tasks are written down all in one place so you don't forget anything
+            important, when the task is done please click also double-click to remove from the list.</p>
+          <a href="https://owamamwen1.github.io/wdd330-byui-profolio/week3/ch3/index.html" target="_blank"><i
+              class='bx bx-link-external'></i></a>
+        </div>
+      </div>
+      <div class="row">
+        <img src="img/challenge2.png">
+        <div class="layer">
+          <h5>Week Four: JavaScript form</h5>
+          <p>The form has validation JavaScript provides a way to validate form's data on the client before
+            sending it to the web server.</p>
+          <a href="https://owamamwen1.github.io/wdd330-byui-profolio/week4/ch4/index.html" target="_blank"><i
+              class='bx bx-link-external'></i></a>
+        </div>
+      </div>
+      <div class="row">
+        <img src="img/challenge3.png">
+        <div class="layer">
+          <h5>Week Five and Six: First challenge project</h5>
+          <p>Todo List with localStorage Prioritize your tasks that are more important.</p>
+          <a href="https://owamamwen1.github.io/wdd330-byui-profolio/week5/ch5/index.html" target="_blank"><i
+              class='bx bx-link-external'></i></a>
+        </div>
+      </div>
+      <div class="row">
+        <img src="img/challenge1.png">
+        <div class="layer">
+          <h5>Week Seven: Change title color with JS</h5>
+          <p>The JavaScript promises function that can change web page title colors, allows you to associate
+            handlers with an asynchronous action's eventual success value or failure reason.</p>
+          <a href="https://owamamwen1.github.io/wdd330-byui-profolio/week7/ch7/index.html" target="_blank"><i
+              class='bx bx-link-external'></i></a>
+        </div>
+      </div>
+      <div class="row">
+        <img src="img/challenge1.png">
+        <div class="layer">
+          <h5>Week Eight: Fibonacci sequence</h5>
+          <p>Fibonacci series in which each number (Fibonacci numbers) starts with a zero.</p>
+          <a href="https://owamamwen1.github.io/wdd330-byui-profolio/week8/ch8/index.html" target="_blank"><i
+              class='bx bx-link-external'></i></a>
+        </div>
+      </div>
+      <div class="row">
+        <img src="img/challenge2.png">
+        <div class="layer">
+          <h5>Week Nine: Countries with Capitals</h5>
+          <p>The Quiz is about continents and each continent contains countries, all these countries have
+            capitals.</p>
+          <a href="https://owamamwen1.github.io/wdd330-byui-profolio/week9/ch9/index.html" target="_blank"><i
+              class='bx bx-link-external'></i></a>
+        </div>
+      </div>
+      <div class="row">
+        <img src="img/challenge3.png">
+        <div class="layer">
+          <h5>Week Ten: Weather Forecasts</h5>
+          <p>The weather forecast is an application with open-weather public APIs science and technology to
+            predict the conditions of the atmosphere.</p>
+          <a href="https://owamamwen1.github.io/wdd330-byui-profolio/week10/ch10/index.html" target="_blank"><i
+              class='bx bx-link-external'></i></a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!----end section design--->
+  <section class="end">
+    <div class="last-text">
+      <p>Copyright © 2022 by Ogunniyi Owamamwen</p>
+    </div>
+
+    <div class="top">
+      <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
+    </div>
+  </section>
+
+  <!---custom js link--->
+  <script type="text/javascript" src="js/script.js"></script>
+
 </body>
 
 </html>
