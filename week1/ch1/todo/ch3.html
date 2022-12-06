@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer</title>
+    <script>
+        function addAndSaveCustomer() {
+            var aName = document.getElementById("name_input").value
+            var anAge = document.getElementById("age_input").value * 1
+            var anInseam = document.getElementById("inseam_input").value * 1
+            var aClothingCustomer = {
+                "name": aName,
+                "age": anAge,
+                "inseam": anInseam
+            }
+            var allCustomers = null
+            var storedCustomersString = localStorage["all_customers"]
+            if (storedCustomersString == null) {
+                allCustomers = []
+            }
+            else {
+                allCustomers = JSON.parse(storedCustomersString)
+            }
+            allCustomers.push(aClothingCustomer)
+            var allCusomersString = JSON.stringify(allCustomers)
+            localStorage["all_customers"] = allCusomersString
+            showAllCustomers()
+
+            document.getElementById("name_input").value = null
+            document.getElementById("age_input").value = null
+            document.getElementById("inseam_input").value = null
+        }
+        function showAllCustomers() {
+            var storedCustomersString = localStorage["all_customers"]
+            if (storedCustomersString != null) {
+                var allCustomers = JSON.parse(storedCustomersString)
+                var customerDisplayer = document.getElementById("all_customers_display")
+                customerDisplayer.innerHTML = null
+                var numberOfCustomers = allCustomers.length
+                for (var i = 0; i < allCustomers.length; i++) {
+                    var aClothingCustomer = allCustomers[i]
+                    customerDisplayer.innerHTML += "<hr><p>Customer: " + aClothingCustomer["name"] + "</p>" + "<p>Age: " + aClothingCustomer["age"] + "</p>" + "<p>Inseam: " + aClothingCustomer["inseam"] + "</p>"
+                }
+            }
+        }
+    </script>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        body {
+            background-color: rgb(181, 168, 168);
+        }
+
+        input {
+
+            box-shadow: 0px 0px 5px #666666 inset;
+            text-indent: 5px;
+            font-size: 16px;
+            padding: 0 6px;
+            padding-left: 12px;
+            border: 3px solid #000;
+            border-radius: 5px;
+            height: 50px;
+            line-height: normal;
+            color: #282828;
+            display: block;
+            width: 90%;
+            box-sizing: border-box;
+            user-select: auto;
+            margin: 15px;
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+        textarea {
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0px 0px 5px #666666 inset;
+            width: 90%;
+            height: 150px;
+            text-indent: 5px;
+            resize: none;
+            overflow: scroll;
+        }
+
+        #customer_entry_area {
+            width: 500px;
+            padding-left: 5px;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0px 0px 5px #666666 inset;
+            text-indent: 5px;
+        }
+
+        button {
+            display: inline-block;
+            outline: 0;
+            border: 0;
+            padding: 8px 16px;
+            width: 200px;
+            font-size: 16px;
+            border-bottom: 4px solid #2b6cb0;
+            cursor: pointer;
+            background-color: #4299e1;
+            border-radius: 4px;
+            font-weight: 700;
+            color: white;
+            line-height: 26px;
+            margin: 15px;
+        }
+    </style>
+</head>
+
+<body onload="showAllCustomers()">
+    <section id="customer_entry_area">
+        <h1>Clothing Customers</h1>
+        <input id="name_input" placeholder="Name"></input>
+        <input id="age_input" placeholder="Age"></input>
+        <input id="inseam_input" placeholder="Inseam"></input>
+        <br>
+        <button onclick="addAndSaveCustomer()">Add</button>
+    </section>
+    <section id="all_customers_display"></section>
+</body>
+
+</html>
