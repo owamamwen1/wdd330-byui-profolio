@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Story Writer</title>
+    <script>
+        function loadStory() {
+            var storyName = document.getElementById("name_input").value
+            var storyHTML = localStorage.getItem(storyName)
+            document.getElementById("story_editor").value = storyHTML
+        }
+        function saveStory() {
+            var storyName = document.getElementById("name_input").value
+            var storyHTML = document.getElementById("story_editor").value
+            localStorage.setItem(storyName, storyHTML)
+        }
+        function displayStory() {
+            var storyHTML = document.getElementById("story_editor").value
+            document.getElementById("story_display").innerHTML = storyHTML
+        }
+    </script>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        textarea {
+            width: 800px;
+            height: 250px;
+            background-color: lightyellow;
+            margin: 15px;
+        }
+
+        input {
+            font-size: 16px;
+            padding: 0 6px;
+            padding-left: 12px;
+            border: 3px solid #000;
+            border-radius: 5px;
+            height: 50px;
+            line-height: normal;
+            color: #282828;
+            display: block;
+            width: 30%;
+            box-sizing: border-box;
+            user-select: auto;
+            margin: 15px;
+        }
+
+        h1 {
+            font-size: xx-large;
+        }
+
+        input:focus {
+            border: 3px solid #5551ff;
+        }
+
+        button {
+            display: inline-block;
+            outline: 0;
+            border: 0;
+            padding: 8px 16px;
+            font-size: 16px;
+            border-bottom: 4px solid #2b6cb0;
+            cursor: pointer;
+            background-color: #4299e1;
+            border-radius: 4px;
+            font-weight: 700;
+            color: white;
+            line-height: 26px;
+            margin: 15px;
+        }
+
+        label {
+            font-size: x-large;
+        }
+
+        .lable_input {
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Story Editor</h1>
+    <div class="lable_input">
+        <label for="name">Story Name:</label>
+        <input type="text" id=name_input name="name"></input>
+    </div>
+    <section>
+        <button onclick="loadStory()">Find and Edit It</button>
+        <button onclick="saveStory()">Save It</button>
+        <button onclick="displayStory()">Display It</button>
+    </section>
+    <textarea id="story_editor" placeholder="Write a totally awesome story here."></textarea>
+    <section id="story_display"></section>
+</body>
+
+</html>
